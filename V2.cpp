@@ -22,7 +22,7 @@ void connect_to_mysql() {
 	}
 
 	/*Connect to the database*/
-	if (mysql_real_connect(conn, "localhost", "root", "BulanandSQL", "bookcricket", 3307, NULL, 0) == NULL) {
+	if (mysql_real_connect(conn, "hostname", "username", "password", "database", port, NULL, 0) == NULL) {
 		fprintf(stderr, "mysql_real_connect() failed: %s\n", mysql_error(conn));
 		mysql_close(conn);
 		exit(EXIT_FAILURE);
